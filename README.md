@@ -1,328 +1,345 @@
-\# \[Challenge Name]
+# 🛡️ CTF & Cybersecurity Write-ups
+
+Welcome to my **CTF & Cybersecurity Write-ups** repository.
+
+This repository documents my hands-on cybersecurity learning journey through **Capture The Flag (CTF) competitions, security labs, web application security, API security, digital forensics, networking, and other authorized cybersecurity training environments**.
+
+The goal is not simply to document how a challenge was solved, but to explain the **reasoning, methodology, investigation process, failed attempts, technical findings, security impact, remediation, and lessons learned**.
+
+---
+
+## 👨‍💻 About Me
+
+I am a **Cybersecurity & Information Technology student** with a strong interest in practical cybersecurity and security research.
+
+### Areas of Interest
+
+* 🌐 Web Application Security
+* 🔐 API Security
+* 🛡️ Access Control & Authorization
+* 🔎 Security Research
+* 🕵️ Digital Forensics
+* ⚔️ Ethical Hacking
+* 🚨 Blue Team & Security Operations
+* 🏆 Capture The Flag Competitions
+
+I use CTFs, security labs, research, and practical projects to continuously develop my cybersecurity skills.
+
+---
+
+# 📂 Repository Structure
+
+```text
+CTF-Writeups/
+│
+├── CTF-Competitions/
+│   └── Write-ups from CTF competitions
+│
+├── HackTheBox/
+│   ├── Challenges/
+│   └── Machines/
+│
+├── PicoCTF/
+│   ├── Binary-Exploitation/
+│   ├── Cryptography/
+│   ├── CyLab-security/
+│   ├── Forensics/
+│   ├── General-Skills/
+│   ├── Reverse-Engineering/
+│   └── Web-Exploitation/
+│
+├── PortSwigger/
+│   ├── Access-Control/
+│   ├── API-Security/
+│   ├── Authentication/
+│   ├── Business-Logic/
+│   ├── File-Upload/
+│   ├── SQL-Injection/
+│   └── SSRF/
+│
+├── Templates/
+│   └── WRITEUP-TEMPLATE.md
+│
+└── TryHackMe/
+    ├── Blue-Team/
+    ├── Forensics/
+    ├── Linux/
+    ├── Network/
+    ├── Red-Team/
+    └── Web/
+```
+
+---
+
+# 🎯 Platforms
+
+## PortSwigger Web Security Academy
+
+Practical web security labs covering vulnerabilities and security concepts such as:
+
+* Access Control
+* Authentication
+* SQL Injection
+* Server-Side Request Forgery (SSRF)
+* File Upload Vulnerabilities
+* API Security
+* Business Logic Vulnerabilities
+* Cross-Site Scripting
+* Information Disclosure
+
+---
+
+## PicoCTF
+
+Write-ups covering practical challenges across multiple cybersecurity domains:
+
+* Web Exploitation
+* Digital Forensics
+* Cryptography
+* Reverse Engineering
+* Binary Exploitation
+* General Skills
+* CyLab Security
+
+---
+
+## TryHackMe
+
+Hands-on learning covering:
 
+* Web Security
+* Networking
+* Linux
+* Digital Forensics
+* Blue Team Operations
+* Red Team Operations
+
+---
+
+## Hack The Box
 
+Write-ups from authorized:
 
-\*\*Platform:\*\*
+* Machines
+* Challenges
+* Security exercises
 
-\*\*Category:\*\*
+---
 
-\*\*Difficulty:\*\*
+## CTF Competitions
 
-\*\*Date Completed:\*\*
+Documentation from cybersecurity competitions and team-based Capture The Flag events.
 
+Challenges may include:
 
+* Web Exploitation
+* Forensics
+* OSINT
+* Cryptography
+* Reverse Engineering
+* Binary Exploitation
+* Miscellaneous
 
-\---
+---
 
+# 🔬 Write-up Methodology
 
+Each write-up is structured around the investigation and problem-solving process.
 
-\## 🎯 Challenge Overview
+```text
+Reconnaissance
+      │
+      ▼
+Observation
+      │
+      ▼
+Hypothesis
+      │
+      ▼
+Testing
+      │
+      ├───────────────┐
+      ▼               ▼
+   Failure          Success
+      │               │
+      ▼               ▼
+Rabbit Holes     Root Cause
+      │               │
+      └───────┬───────┘
+              ▼
+       Security Impact
+              │
+              ▼
+          Remediation
+              │
+              ▼
+       Lessons Learned
+```
 
+The objective is to demonstrate **how I think through a security problem**, rather than simply listing commands or reproducing a solution.
 
+---
 
-Briefly describe the objective of the challenge.
+# 🧪 What Each Write-up Covers
 
+Depending on the challenge, write-ups may include:
 
+### 🔎 Reconnaissance
 
-\---
+* Application mapping
+* Endpoint discovery
+* Parameter identification
+* Technology identification
+* Request/response analysis
+* Attack surface identification
 
+### 🧠 Analysis
 
+* Observations
+* Hypotheses
+* Trust boundaries
+* Authentication analysis
+* Authorization analysis
+* Input validation analysis
+* Application behavior
 
-\## 🔎 Initial Analysis
+### 🧪 Testing
 
+* Test methodology
+* Requests and responses
+* Payload analysis
+* Tool usage
+* Evidence
+* Results
 
+### 🐇 Rabbit Holes
 
-Describe what you observed when you first accessed the challenge.
+Failed approaches and incorrect assumptions are documented when useful.
 
+This helps demonstrate the investigative process behind the final solution.
 
+### 🔓 Root Cause
 
-Questions to consider:
+Where applicable, the underlying technical reason for the vulnerability is explained.
 
+### 💥 Security Impact
 
+The potential consequences of the vulnerability are described from a security perspective.
 
-\* What functionality is available?
+### 🛡️ Remediation
 
-\* What input is controlled by the user?
+Recommended defensive measures are provided where appropriate.
 
-\* Are there authentication mechanisms?
+### 🧠 Lessons Learned
 
-\* Are there user roles?
+Each write-up concludes with the most important technical and methodological lessons.
 
-\* Are there object identifiers?
+---
 
-\* Are there API endpoints?
+# 🛠️ Tools
 
-\* Is there interesting client-side JavaScript?
+Tools used throughout these exercises may include:
 
+* Burp Suite
+* Nmap
+* Wireshark
+* Splunk
+* curl
+* Browser Developer Tools
+* Python
+* Git
+* Linux
+* Other security and analysis tools
 
+Tools are selected based on the requirements of each challenge rather than used simply for the sake of using them.
 
-\---
+---
 
+# 📚 Security Topics
 
+This repository will progressively cover areas including:
 
-\# 🧭 Methodology
+| Area                   | Topics                                                         |
+| ---------------------- | -------------------------------------------------------------- |
+| 🌐 Web Security        | SQL Injection, XSS, SSRF, File Upload, Authentication          |
+| 🔐 Access Control      | IDOR, BOLA, BFLA, Privilege Escalation                         |
+| 🔌 API Security        | Authentication, Authorization, API Enumeration, Access Control |
+| 🕵️ Forensics          | File Analysis, Log Analysis, Network Evidence                  |
+| 🔑 Cryptography        | Classical Cryptography, Encoding, Encryption                   |
+| ⚙️ Reverse Engineering | Binary Analysis, Program Logic                                 |
+| 💻 Binary Exploitation | Memory Corruption, Exploitation Concepts                       |
+| 🌐 Networking          | Protocols, Enumeration, Traffic Analysis                       |
+| 🚨 Blue Team           | Detection, Investigation, Log Analysis, Threat Hunting         |
 
+---
 
+# 📈 Learning Philosophy
 
-\## Step 1: Reconnaissance
+> **Understanding why a vulnerability exists is more valuable than memorizing the payload that exploits it.**
 
+Cybersecurity requires more than knowing tools and commands.
 
+My approach is to focus on:
 
-Document how you mapped the application or challenge.
+* Understanding underlying security concepts
+* Developing systematic testing methodologies
+* Asking why an application behaves a certain way
+* Learning from failed attempts
+* Understanding root causes
+* Thinking about defensive solutions
+* Continuously improving through practical experience
 
+---
 
+# 📝 Write-up Template
 
-\### Observations
+A reusable write-up template is available here:
 
+[`Templates/WRITEUP-TEMPLATE.md`](Templates/WRITEUP-TEMPLATE.md)
 
+The template provides a consistent structure for documenting future challenges.
 
-\* Observation 1
+---
 
-\* Observation 2
+# ⚠️ Responsible Use & Disclaimer
 
-\* Observation 3
+All activities documented in this repository are intended for **authorized cybersecurity training and educational environments**.
 
+Examples include:
 
+* Capture The Flag competitions
+* Intentionally vulnerable applications
+* Security training platforms
+* Cybersecurity laboratories
+* Systems where explicit authorization has been granted
 
-\---
+The techniques documented here should **not** be used against systems, applications, accounts, networks, or data without appropriate authorization.
 
+Where platform rules restrict publication of solutions, those rules will be respected.
 
+---
 
-\## Step 2: Hypothesis
+# 🚀 Continuous Learning
 
+This repository is a living record of my cybersecurity development.
 
+As I progress, I will continue adding:
 
-Based on the reconnaissance results:
+* CTF write-ups
+* Security research
+* Web security labs
+* API security testing
+* Digital forensics investigations
+* Blue-team exercises
+* Lessons learned
+* Security methodologies
 
+---
 
+## ⭐ Support
 
-> Explain what you suspected and why.
+If you find a write-up useful, feel free to **star the repository** and follow along with my cybersecurity learning journey.
 
+---
 
-
-\---
-
-
-
-\## Step 3: Testing
-
-
-
-Describe how you tested the hypothesis.
-
-
-
-\### Test
-
-
-
-\*\*Goal:\*\*
-
-\[What were you trying to determine?]
-
-
-
-\*\*Method:\*\*
-
-\[Describe the authorized testing approach.]
-
-
-
-\*\*Result:\*\*
-
-\[What happened?]
-
-
-
-\---
-
-
-
-\# 🐇 Rabbit Holes
-
-
-
-Document unsuccessful attempts.
-
-
-
-\## Attempt 1
-
-
-
-\*\*Hypothesis:\*\*
-
-
-
-\[What did you initially believe?]
-
-
-
-\*\*Result:\*\*
-
-
-
-\[What actually happened?]
-
-
-
-\*\*Lesson:\*\*
-
-
-
-\[What did this teach you?]
-
-
-
-\---
-
-
-
-\# 🔓 Root Cause Analysis
-
-
-
-Explain why the vulnerability existed.
-
-
-
-Consider:
-
-
-
-\* Missing authorization checks
-
-\* Insecure input handling
-
-\* Incorrect trust boundaries
-
-\* Missing validation
-
-\* Weak authentication
-
-\* Insecure business logic
-
-
-
-\---
-
-
-
-\# 💥 Security Impact
-
-
-
-Explain the potential impact in a real-world environment.
-
-
-
-Possible impacts may include:
-
-
-
-\* Unauthorized data access
-
-\* Unauthorized modification
-
-\* Privilege escalation
-
-\* Information disclosure
-
-\* Account compromise
-
-
-
-\---
-
-
-
-\# 🛡️ Remediation
-
-
-
-Describe how the issue should be fixed.
-
-
-
-\### Recommendation 1
-
-
-
-\[Security recommendation]
-
-
-
-\### Recommendation 2
-
-
-
-\[Security recommendation]
-
-
-
-\### Recommendation 3
-
-
-
-\[Security recommendation]
-
-
-
-\---
-
-
-
-\# 🧠 Key Lessons Learned
-
-
-
-1\. Lesson learned.
-
-2\. Lesson learned.
-
-3\. Lesson learned.
-
-
-
-\---
-
-
-
-\# 🛠️ Tools Used
-
-
-
-\* Tool
-
-\* Tool
-
-\* Tool
-
-
-
-\---
-
-
-
-\# 📚 References
-
-
-
-\* Official documentation
-
-\* OWASP resources
-
-\* Relevant research
-
-
-
-\---
-
-
-
-\## ⚠️ Disclaimer
-
-
-
-This write-up documents activities performed in an authorized training environment, CTF, or intentionally vulnerable application. The techniques described should only be used where explicit permission has been granted.
-
+**Built through continuous learning, experimentation, documentation, and responsible security research.**
