@@ -1,328 +1,384 @@
-\# \[Challenge Name]
+# 🛡️ [Challenge Name]
 
+> A technical write-up documenting the methodology, analysis, exploitation, impact, and lessons learned from this authorized cybersecurity challenge.
 
+---
 
-\*\*Platform:\*\*
+## 📋 Challenge Information
 
-\*\*Category:\*\*
+| Field                         | Details                                                              |
+| ----------------------------- | -------------------------------------------------------------------- |
+| **Platform**                  | [PortSwigger / PicoCTF / TryHackMe / Hack The Box / CTF Competition] |
+| **Category**                  | [Web / API / Forensics / Crypto / Pwn / Reverse Engineering / etc.]  |
+| **Challenge**                 | [Challenge Name]                                                     |
+| **Difficulty**                | [Easy / Medium / Hard / Insane]                                      |
+| **Date Completed**            | [YYYY-MM-DD]                                                         |
+| **Vulnerability / Technique** | [e.g., IDOR / SQL Injection / SSRF]                                  |
+| **Status**                    | ✅ Solved                                                             |
 
-\*\*Difficulty:\*\*
+---
 
-\*\*Date Completed:\*\*
+# 🎯 Objective
 
+Describe the goal of the challenge.
 
+**Challenge objective:**
 
-\---
+> [What were you required to discover, exploit, retrieve, or accomplish?]
 
+---
 
+# 🔎 Initial Analysis
 
-\## 🎯 Challenge Overview
+Describe what you observed when first interacting with the target.
 
+### Application / Environment
 
+* **Target:** [URL / IP / challenge environment]
+* **Technology:** [If identified]
+* **Authentication:** [Required / Not required]
+* **User roles:** [If applicable]
+* **Interesting functionality:** [Describe]
+* **API endpoints:** [If applicable]
 
-Briefly describe the objective of the challenge.
+### Initial Observations
 
+1. [Observation]
+2. [Observation]
+3. [Observation]
 
+### Attack Surface
 
-\---
+Potentially interesting attack surfaces included:
 
+* [Endpoint / feature]
+* [Parameter]
+* [API route]
+* [File upload]
+* [Authentication mechanism]
+* [Object identifier]
+* [Client-side functionality]
 
+---
 
-\## 🔎 Initial Analysis
+# 🧭 Methodology
 
+## Step 1 — Reconnaissance
 
+Explain how you mapped the application or challenge.
 
-Describe what you observed when you first accessed the challenge.
+### What I Tested
 
+* [Test]
+* [Test]
+* [Test]
 
+### Evidence
 
-Questions to consider:
+```text
+[Relevant request, response, output, or observation]
+```
 
+### Finding
 
+[Explain what the reconnaissance revealed.]
 
-\* What functionality is available?
+---
 
-\* What input is controlled by the user?
+## Step 2 — Hypothesis
 
-\* Are there authentication mechanisms?
+Based on the observations, I suspected:
 
-\* Are there user roles?
+> [Explain your hypothesis.]
 
-\* Are there object identifiers?
+### Why?
 
-\* Are there API endpoints?
+[Explain the reasoning behind the hypothesis.]
 
-\* Is there interesting client-side JavaScript?
+---
 
+## Step 3 — Testing
 
+### Test 1
 
-\---
+**Goal**
 
+[What were you trying to determine?]
 
+**Method**
 
-\# 🧭 Methodology
+[Describe the authorized testing approach.]
 
+**Result**
 
+[Explain what happened.]
 
-\## Step 1: Reconnaissance
+---
 
+### Test 2
 
+**Goal**
 
-Document how you mapped the application or challenge.
+[What were you trying to determine?]
 
+**Method**
 
+[Describe the authorized testing approach.]
 
-\### Observations
+**Result**
 
+[Explain what happened.]
 
+---
 
-\* Observation 1
+# 🧪 Technical Analysis
 
-\* Observation 2
+Explain the technical behavior that led to the discovery.
 
-\* Observation 3
+### Request
 
+```http
+[HTTP request]
+```
 
+### Response
 
-\---
+```http
+[HTTP response]
+```
 
+### Important Parameter / Behavior
 
+```text
+[Parameter, endpoint, header, object ID, or other relevant detail]
+```
 
-\## Step 2: Hypothesis
+Explain why this behavior was interesting.
 
+---
 
+# 🔓 Vulnerability / Root Cause
 
-Based on the reconnaissance results:
+## Vulnerability
 
+**[Vulnerability Name]**
 
+Examples:
 
-> Explain what you suspected and why.
+* IDOR / BOLA
+* Broken Function-Level Authorization
+* SQL Injection
+* SSRF
+* Authentication Bypass
+* File Upload Vulnerability
+* Business Logic Vulnerability
 
+### Root Cause
 
-
-\---
-
-
-
-\## Step 3: Testing
-
-
-
-Describe how you tested the hypothesis.
-
-
-
-\### Test
-
-
-
-\*\*Goal:\*\*
-
-\[What were you trying to determine?]
-
-
-
-\*\*Method:\*\*
-
-\[Describe the authorized testing approach.]
-
-
-
-\*\*Result:\*\*
-
-\[What happened?]
-
-
-
-\---
-
-
-
-\# 🐇 Rabbit Holes
-
-
-
-Document unsuccessful attempts.
-
-
-
-\## Attempt 1
-
-
-
-\*\*Hypothesis:\*\*
-
-
-
-\[What did you initially believe?]
-
-
-
-\*\*Result:\*\*
-
-
-
-\[What actually happened?]
-
-
-
-\*\*Lesson:\*\*
-
-
-
-\[What did this teach you?]
-
-
-
-\---
-
-
-
-\# 🔓 Root Cause Analysis
-
-
-
-Explain why the vulnerability existed.
-
-
+Explain **why the vulnerability exists**.
 
 Consider:
 
+* Missing authorization checks
+* Incorrect access-control logic
+* Weak authentication
+* Insufficient input validation
+* Insecure direct object references
+* Trusting client-controlled data
+* Incorrect security assumptions
+* Improper server-side validation
 
+### Why the Application Was Vulnerable
 
-\* Missing authorization checks
+[Technical explanation.]
 
-\* Insecure input handling
+---
 
-\* Incorrect trust boundaries
+# 💥 Exploitation / Solution
 
-\* Missing validation
+Describe the final successful approach.
 
-\* Weak authentication
+> Only document techniques performed within the authorized challenge environment.
 
-\* Insecure business logic
+### Step 1
 
+[Describe the first step.]
 
+```text
+[Command / request / payload where appropriate]
+```
 
-\---
+### Step 2
 
+[Describe the next step.]
 
+```text
+[Command / request / payload where appropriate]
+```
 
-\# 💥 Security Impact
+### Step 3
 
+[Describe the successful result.]
 
+```text
+[Result / flag / evidence]
+```
 
-Explain the potential impact in a real-world environment.
+---
 
+# 🐇 Rabbit Holes
 
+Document approaches that initially appeared promising but did not work.
 
-Possible impacts may include:
+## Rabbit Hole 1
 
+### Hypothesis
 
+[What did you initially think?]
 
-\* Unauthorized data access
+### Test
 
-\* Unauthorized modification
+[What did you try?]
 
-\* Privilege escalation
+### Result
 
-\* Information disclosure
+[What happened?]
 
-\* Account compromise
+### Lesson
 
+[What did this teach you?]
 
+---
 
-\---
+## Rabbit Hole 2
 
+### Hypothesis
 
+[What did you initially think?]
 
-\# 🛡️ Remediation
+### Test
 
+[What did you try?]
 
+### Result
 
-Describe how the issue should be fixed.
+[What happened?]
 
+### Lesson
 
+[What did this teach you?]
 
-\### Recommendation 1
+---
 
+# 💣 Impact
 
+Explain what could happen if the same vulnerability existed in a real-world application.
 
-\[Security recommendation]
+### Potential Impact
 
+* [Unauthorized data access]
+* [Unauthorized modification]
+* [Privilege escalation]
+* [Account compromise]
+* [Information disclosure]
+* [Security control bypass]
 
+### Security Significance
 
-\### Recommendation 2
+[Explain why the vulnerability matters.]
 
+---
 
+# 🛡️ Remediation
 
-\[Security recommendation]
+Explain how the vulnerability should be prevented or fixed.
 
+## Recommendation 1
 
+[Security recommendation.]
 
-\### Recommendation 3
+## Recommendation 2
 
+[Security recommendation.]
 
+## Recommendation 3
 
-\[Security recommendation]
+[Security recommendation.]
 
+### Secure Design Principle
 
+[Explain the security principle that should be applied.]
 
-\---
+---
 
+# 🧠 Lessons Learned
 
+### Technical Lessons
 
-\# 🧠 Key Lessons Learned
+1. [Lesson]
+2. [Lesson]
+3. [Lesson]
 
+### Methodology Lessons
 
+1. [Lesson]
+2. [Lesson]
+3. [Lesson]
 
-1\. Lesson learned.
+### What I Would Do Differently
 
-2\. Lesson learned.
+[Explain how your methodology could be improved next time.]
 
-3\. Lesson learned.
+---
 
+# 🛠️ Tools Used
 
+| Tool                 | Purpose   |
+| -------------------- | --------- |
+| **Burp Suite**       | [Purpose] |
+| **Browser DevTools** | [Purpose] |
+| **Nmap**             | [Purpose] |
+| **curl**             | [Purpose] |
+| **Python**           | [Purpose] |
+| **Other**            | [Purpose] |
 
-\---
+Remove tools that were not actually used.
 
+---
 
+# 📸 Evidence
 
-\# 🛠️ Tools Used
+Screenshots and supporting evidence can be included here.
 
+### Screenshot 1 — [Description]
 
+![Description](./images/screenshot-1.png)
 
-\* Tool
+### Screenshot 2 — [Description]
 
-\* Tool
+![Description](./images/screenshot-2.png)
 
-\* Tool
+> Do not include real credentials, tokens, API keys, personal information, or sensitive data in published screenshots.
 
+---
 
+# 📚 References
 
-\---
+* [Official challenge documentation]
+* [OWASP documentation]
+* [Relevant security research]
+* [Official platform documentation]
 
+---
 
+# ⚠️ Disclaimer
 
-\# 📚 References
+This write-up documents activities performed in an authorized cybersecurity training environment, Capture The Flag competition, intentionally vulnerable application, or other environment where testing was permitted.
 
+The techniques described should only be used against systems where explicit authorization has been granted.
 
+---
 
-\* Official documentation
-
-\* OWASP resources
-
-\* Relevant research
-
-
-
-\---
-
-
-
-\## ⚠️ Disclaimer
-
-
-
-This write-up documents activities performed in an authorized training environment, CTF, or intentionally vulnerable application. The techniques described should only be used where explicit permission has been granted.
-
+**Author:** Aminieli Mrindoko
+**Focus:** Cybersecurity • Web Security • API Security • Ethical Hacking
+**Repository:** CTF & Cybersecurity Write-ups
